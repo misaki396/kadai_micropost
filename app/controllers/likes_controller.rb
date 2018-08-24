@@ -6,7 +6,6 @@ class LikesController < ApplicationController
     @like.save
     redirect_to ("/users/#{params[:micropost_id]}")
   end
-  
 
   def destroy
     @like = Like.find_by(

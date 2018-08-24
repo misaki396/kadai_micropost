@@ -6,8 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @micropost = @user.microposts.find_by(params[:id])
+    @user = User.find_by(id: params[:id])
     @microposts = @user.microposts.order('created_at DESC').page(params[:page])
     counts(@user)
   end
