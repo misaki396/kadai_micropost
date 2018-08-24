@@ -46,57 +46,10 @@ Followers <span class="badge">
 <% end %>
 </li>
     </ul>
-    
-<ul class="media-list">
 
-<% @microposts.each do |micropost| %>
+     <%= render 'microposts/microposts', microposts: @microposts %>
 
-
-<% user = micropost.user %>
-
-    <li class="media">
-      <div class="media-left">
-        <img class="media-object img-rounded" src="
-<%= gravatar_url(user, options = { size: 50 }) %>
-" alt="">
-      </div>
-      <div class="media-body">
-        <div>
-
-<%= link_to user.name, user_path(user) %>
- <span class="text-muted">posted at
-<%= micropost.created_at %>
-</span>
-        </div>
-        <div>
-          <p>
-<%= micropost.content %>
-</p>
-        </div>
-        <div>
-          <% if Like.find_by(user_id: current_user, micropost_id: micropost.id) %>
-          <%= link_to("いいね！取消","/likes/#{micropost.id}/destroy", {method: "delete"}) %>
-          <% else %>
-          <%= link_to("いいね！","/likes/#{micropost.id}/create", {method: "post"}) %>
-          <% end %>
-        </div>
         
-        <div>
-            <% if current_user == micropost.user %>
-            <%= link_to "Delete", micropost, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
-            <% end %>
-        </div>
-      </div>
-    </li>
-
-<% end %>
-
-
-<%= paginate @microposts %>
-
-</ul>
-
-
 
   </div>
 </div>
