@@ -4,7 +4,7 @@ class LikesController < ApplicationController
       user_id: current_user.id,
       micropost_id: params[:micropost_id])
     @like.save
-    redirect_to ("/users/#{params[:micropost_id]}")
+    redirect_to root_url
   end
 
   def destroy
@@ -12,6 +12,6 @@ class LikesController < ApplicationController
       user_id: current_user.id,
       micropost_id: params[:micropost_id])
     @like.destroy
-    redirect_to ("/users/#{params[:micropost_id]}")
+    redirect_to root_url
   end
 end
