@@ -1,0 +1,43 @@
+<div class="main user-show">
+  
+   
+    
+    
+    <% @likes.each do |like| %>
+    
+      <% micropost = Micropost.find_by(id: like.micropost_id) %>
+            <li class="media">
+              <div class="media-left">
+        <img class="media-object img-rounded" src="
+<%= gravatar_url(@user, options = { size: 50 }) %>
+" alt="">
+      </div>
+              
+                <div class="media-body">
+                  <div><%= micropost.user.name %>
+                  <span class="text-muted">poted at
+                  <%= micropost.created_at %>
+                  </span>
+                  </div>
+                  <div>
+                    <p><%= micropost.content %></p>
+                  </div>
+                  
+                  <div>
+          <% if Like.find_by(user_id: current_user, micropost_id: micropost.id) %>
+          <%= link_to("いいね！取消","/likes/#{micropost.id}/destroy", {method: "delete"}) %>
+          <% else %>
+          <%= link_to("いいね！","/likes/#{micropost.id}/create", {method: "post"}) %>
+          <% end %>
+        </div>
+                
+              </div>
+            </li>
+            
+          
+          
+        
+      
+    <% end %>
+  
+</div>

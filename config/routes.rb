@@ -6,6 +6,7 @@ Rails.application.routes.draw do
  delete "likes/:micropost_id/destroy" => "likes#destroy"
  
  
+ 
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
       get :followings
       get :followers
       get :microposts
+      get :likes
     end
   end
 
