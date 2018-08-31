@@ -1,15 +1,11 @@
 <% if current_user.like?(micropost) %>
-
   <%= form_for(current_user.likes.find_by(micropost_id: micropost.id), html: { method: :delete, style: 'display: inline;' }) do |f| %>
-    <%= hidden_field_tag :micropost_id, micropost.id %>
-    <%= submit_tag 'Unlike', class: 'btn btn-danger btn-xs' %>
+  <%= hidden_field_tag :micropost_id, micropost.id %>
+  <%= submit_tag 'Unlike', class: 'btn btn-danger btn-xs' %>
   <% end %>
-
 <% else %>
-
   <%= form_for(current_user.likes.build, html: { style: 'display: inline;' }) do |f| %>
-    <%= hidden_field_tag :micropost_id, micropost.id %>
-    <%= submit_tag 'Like', class: 'btn btn-success btn-xs' %>
+  <%= hidden_field_tag :micropost_id, micropost.id %>
+  <%= submit_tag 'Like', class: 'btn btn-success btn-xs' %>
   <% end %>
-
 <% end %>
