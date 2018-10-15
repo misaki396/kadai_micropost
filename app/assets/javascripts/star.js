@@ -16,7 +16,7 @@ $(document).on('click', '.star1', function() {
 $(document).on('click', '.star2', function() {
     if($('.star2').css('color') == 'rgb(255, 0, 0)'){
     $('.star1').css('color', 'yellow')
-    $('.star2').css('color', 'yellow')git
+    $('.star2').css('color', 'yellow')
     console.log('ok');
     } else {
         console.log('星が黄色だったら')
