@@ -1,8 +1,9 @@
 $(function(){
-    $('#star').each(function(i){
-        $(this).attr('id','star' + (i+1));
+    $('#1').each(function(i){
+        $(this).attr('id','#1' + (i+1));
     });
-});
+
+
 $(document).on('click', '.star1', function() {
     if($('.star1').css('color') == 'rgb(255, 0, 0)'){
     $('.star1').css('color', 'yellow')
@@ -14,6 +15,8 @@ $(document).on('click', '.star1', function() {
         $('.star4').css('color', 'red')
         $('.star5').css('color', 'red')}
     });
+});
+
 
 
 
