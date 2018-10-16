@@ -1,7 +1,6 @@
 $(function(){
-    $('#1').each(function(i){
-        $(this).attr('id','#1' + (i+1));
-    });
+    $('div').each(function(i){
+        $(this).attr('id','element' + (i+1));
 
 
 $(document).on('click', '.star1', function() {
@@ -15,10 +14,6 @@ $(document).on('click', '.star1', function() {
         $('.star4').css('color', 'red')
         $('.star5').css('color', 'red')}
     });
-});
-
-
-
 
 $(document).on('click', '.star2', function() {
     if($('.star2').css('color') == 'rgb(255, 0, 0)'){
@@ -31,7 +26,8 @@ $(document).on('click', '.star2', function() {
           $('.star4').css('color', 'red')
           $('.star5').css('color', 'red')}
     });
-
+    });
+});
 $(document).on('click', '.star3', function() {
     if($('.star3').css('color') == 'rgb(255, 0, 0)'){
     $('.star1').css('color', 'yellow')
@@ -70,5 +66,6 @@ $(document).on('click', '.star5', function() {
         console.log('星が黄色だったら')
     }
 });
+
 
 
