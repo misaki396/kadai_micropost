@@ -1,66 +1,67 @@
 $(function(){
-    $('div').each(function(i){
+    $('.fas').each(function(i){
         $(this).attr('id','element' + (i+1));
+    });
+});
 
-
-$(document).on('click', '.star1', function() {
-    if($('.star1').css('color') == 'rgb(255, 0, 0)'){
-    $('.star1').css('color', 'yellow')
+$(document).on('click', '#element1', function() {
+    if($('#element1').css('color') == 'rgb(255, 0, 0)'){
+    $('#element1').css('color', 'yellow')
     console.log('ok');
     } else {
     console.log('星が黄色だったら')
-        $('.star2').css('color', 'red')
-        $('.star3').css('color', 'red')
-        $('.star4').css('color', 'red')
-        $('.star5').css('color', 'red')}
+        $('#element2').css('color', 'red')
+        $('#element3').css('color', 'red')
+        $('#element4').css('color', 'red')
+        $('#element5').css('color', 'red')
+    }
     });
 
-$(document).on('click', '.star2', function() {
-    if($('.star2').css('color') == 'rgb(255, 0, 0)'){
-    $('.star1').css('color', 'yellow')
-    $('.star2').css('color', 'yellow')
+$(document).on('click', '#element2', function() {
+    if($('#element2').css('color') == 'rgb(255, 0, 0)'){
+    $('#element1').css('color', 'yellow')
+    $('#element2').css('color', 'yellow')
     console.log('ok');
     } else {
         console.log('星が黄色だったら')
-          $('.star3').css('color', 'red')
-          $('.star4').css('color', 'red')
-          $('.star5').css('color', 'red')}
+          $('#element3').css('color', 'red')
+          $('#element4').css('color', 'red')
+          $('#element5').css('color', 'red')}
     });
-    });
-});
-$(document).on('click', '.star3', function() {
-    if($('.star3').css('color') == 'rgb(255, 0, 0)'){
-    $('.star1').css('color', 'yellow')
-    $('.star2').css('color', 'yellow')
-    $('.star3').css('color', 'yellow')
+
+$(document).on('click', '#element3', function() {
+    if($('#element3').css('color') == 'rgb(255, 0, 0)'){
+    $('#element1').css('color', 'yellow')
+    $('#element2').css('color', 'yellow')
+    $('#element3').css('color', 'yellow')
     console.log('ok');
     } else {
         console.log('星が黄色だったら')
-    $('.star4').css('color', 'red')
-    $('.star5').css('color', 'red')}
+    $('#element4').css('color', 'red')
+    $('#element5').css('color', 'red')}
     });
 
 
-$(document).on('click', '.star4', function() {
-    if($('.star4').css('color') == 'rgb(255, 0, 0)'){
-    $('.star1').css('color', 'yellow')
-    $('.star2').css('color', 'yellow')
-    $('.star3').css('color', 'yellow')
-    $('.star4').css('color', 'yellow')
+$(document).on('click', '#element4', function() {
+    if($('#element4').css('color') == 'rgb(255, 0, 0)'){
+    $('#element1').css('color', 'yellow')
+    $('#element2').css('color', 'yellow')
+    $('#element3').css('color', 'yellow')
+    $('#element4').css('color', 'yellow')
     console.log('ok');
     } else {
         console.log('星が黄色だったら')
-        $('.star5').css('color', 'red')
+        $('#element5').css('color', 'red')
     }
 });
 
-$(document).on('click', '.star5', function() {
-    if($('.star5').css('color') == 'rgb(255, 0, 0)'){
-    $('.star1').css('color', 'yellow')
-    $('.star2').css('color', 'yellow')
-    $('.star3').css('color', 'yellow')
-    $('.star4').css('color', 'yellow')
-    $('.star5').css('color', 'yellow')
+$(document).on('click', '#element5', function() {
+    if($('#element5').css('color') == 'rgb(255, 0, 0)'){
+    $('#element1').css('color', 'yellow')
+    $('#element2').css('color', 'yellow')
+    $('#element3').css('color', 'yellow')
+    $('#element4').css('color', 'yellow')
+    $('#element5').css('color', 'yellow')
     console.log('ok');
     } else {
         console.log('星が黄色だったら')
