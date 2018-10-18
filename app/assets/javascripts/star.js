@@ -10,7 +10,8 @@ $(function(){
 //    });
 //});
 
-$(document).on('click', '.star_1', function() {
+
+$("[id^=js-star-id1] [class=]").on('click', function() {
     if($('.star_1').css('color') == 'rgb(255, 0, 0)'){
     $('.star_1').css('color', 'yellow')
     console.log('ok');
